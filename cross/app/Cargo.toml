@@ -1,0 +1,32 @@
+[package]
+authors = ["Jorge Aparicio <jorge.aparicio@ferrous-systems.com>"]
+edition = "2018"
+name = "app"
+version = "0.1.0"
+
+# makes `cargo check --all-targets` work
+[[bin]]
+name = "app"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+board = { path = "../board" }
+cortex-m-rtic = "0.5.6"
+defmt = "0.2.0"
+defmt-rtt = "0.2.0"
+heapless = "0.6.1"
+messages = { path = "../../messages" }
+panic-probe = { version = "0.2.0", features = ["print-defmt"] }
+postcard = "0.5.2"
+
+[features]
+default = ['defmt-default']
+# these features are required by defmt
+defmt-default = []
+defmt-trace = []
+defmt-debug = []
+defmt-info = []
+defmt-warn = []
+defmt-error = []

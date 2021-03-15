@@ -1,0 +1,26 @@
+[package]
+authors = ["Jorge Aparicio <jorge.aparicio@ferrous-systems.com>"]
+edition = "2018"
+name = "board"
+version = "0.1.0"
+
+# makes `cargo check --all-targets` (used by Rust-Analyzer) work
+[lib]
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+cortex-m = "0.6.7"
+defmt = "0.2.0"
+nrf52840-hal = "0.12.0"
+scd30 = { path = "../../scd30" }
+
+[features]
+# these features are required by defmt
+defmt-default = []
+defmt-trace = []
+defmt-debug = []
+defmt-info = []
+defmt-warn = []
+defmt-error = []

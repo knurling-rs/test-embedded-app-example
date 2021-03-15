@@ -1,0 +1,28 @@
+[package]
+authors = ["Jorge Aparicio <jorge.aparicio@ferrous-systems.com>"]
+edition = "2018"
+name = "self-tests"
+publish = false
+version = "0.1.0"
+
+[[test]]
+name = "scd30"
+harness = false
+
+[dev-dependencies]
+board = { path = "../board" }
+cortex-m = "0.6.7"
+defmt = "0.2.0"
+defmt-rtt = "0.2.0"
+defmt-test = "0.2.1"
+panic-probe = { version = "0.2.0", features = ["print-defmt"] }
+
+[features]
+default = ['defmt-trace']
+# these features are required by defmt
+defmt-default = []
+defmt-trace = []
+defmt-debug = []
+defmt-info = []
+defmt-warn = []
+defmt-error = []
