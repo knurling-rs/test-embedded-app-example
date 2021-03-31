@@ -1,6 +1,7 @@
 # `test-embedded-app-example`
 
 Example of testing an embedded application with 3 different kinds of tests.
+[Check out the associated blog post here!](https://ferrous-systems.com/blog/test-embedded-app/)
 
 > TODO add link to blog post when it's live
 
