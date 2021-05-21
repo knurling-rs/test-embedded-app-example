@@ -3,6 +3,8 @@
 Example of testing an embedded application with 3 different kinds of tests.
 [Check out the associated blog post here!](https://ferrous-systems.com/blog/test-embedded-app/)
 
+Please refer to https://github.com/knurling-rs/app-template for the installation instuctions.
+
 ## License
 
 Licensed under either of
